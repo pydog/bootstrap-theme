@@ -7,7 +7,7 @@
 
 Copy the bootstrap-theme into your blog's octopress .theme directory:
 
-     $ cp bootstrap-theme $MY_OCTOBLOG/.themes/bootstrap
+     $ cp -R bootstrap-theme $MY_OCTOBLOG/.themes/bootstrap
 
 Install the theme and generate site:
 
