@@ -1,5 +1,11 @@
 # Bootstrap theme
 
+## Prerequisites
+
+Please check that you have a recent version of [compass](http://compass-style.org/) installed in octopress' bundle
+(see Gemfile.lock in your octopress directory and run bundle update if necessary), otherwise, you might get errors
+similar to those reported in issue #7. Compass version 0.12.1 is known to work.
+
 ## Installation
 
      $ git clone git://github.com/bkutil/bootstrap-theme.git bootstrap-theme
