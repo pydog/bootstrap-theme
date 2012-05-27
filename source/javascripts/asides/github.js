@@ -12,7 +12,7 @@ var github = (function(){
     showRepos: function(options){
       $.ajax({
           url: "http://github.com/api/v2/json/repos/show/"+options.user+"?callback=?"
-        , type: 'jsonp'
+        , dataType: 'jsonp'
         , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
         , success: function(data) {
           var repos = [];
