@@ -9,7 +9,6 @@ similar to those reported in issue #7. Compass version 0.12.1 is known to work.
 ## Installation
 
      $ git clone git://github.com/bkutil/bootstrap-theme.git bootstrap-theme
-     $ cd bootstrap-theme
 
 Copy the bootstrap-theme into your blog's octopress .theme directory:
 
