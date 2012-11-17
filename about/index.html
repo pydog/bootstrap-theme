@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Bootstrap theme demo</title>
+  <title>about - Bootstrap theme demo</title>
   <meta name="author" content="Balazs Kutil">
 
   
-  <meta name="description" content="Extra post so that we see older/newer links.
-">
+  <meta name="description" content="About Mar 26th, 2012 About This is a sample About page for testing page layout. One
+Two
+Three Mar 26th, 2012 Tweet Comments Please enable JavaScript &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bkutil.github.com/bootstrap-theme">
+  <link rel="canonical" href="http://bkutil.github.com/bootstrap-theme/about">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -91,19 +92,43 @@
 </nav>
   <div class="container">
     <div class="row-fluid">
-      <div class="span9">
-  
-  
-  
-    <article>
       
+<article role="article" class="span9">
+
+  
   <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/26/another-extra-post-to-test-pagination/">Another Extra Post to Test Pagination</a></h1>
-    
-    
+    <h1 class="entry-title">About</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-26T16:20:00+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time></p>
+  </header>
+  
+  <h2>About</h2>
+
+<p>This is a sample About page for testing page layout.</p>
+
+<ol>
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+</ol>
+
+
+  
+    <footer>
       <p class="meta">
         
+        
 
 
 
@@ -115,65 +140,34 @@
   
 
 
-<time datetime="2012-03-26T17:02:00+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
+<time datetime="2012-03-26T16:20:00+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
         
       </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Extra post so that we see older/newer links.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/26/an-extra-post-to-test-pagination/">An Extra Post to Test Pagination</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+        <div class="sharing">
   
-
-
-<time datetime="2012-03-26T17:02:00+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Extra post so that we see older/newer links.</p>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bkutil.github.com/bootstrap-theme/about/index.html" data-via="balazs_kutil" data-counturl="http://bkutil.github.com/bootstrap-theme/about/index.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
-
-    </article>
-  
-  <ul class="pager">
-    
-    <li class="previous"><a href="/blog/page/2/">&larr; Older</a></li>
-    
-    <li><a href="/blog/archives">Blog Archives</a></li>
-    
-  </ul>
+      
+      
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+      </section>
+      
+    </footer>
+  
+</article>
+
 <aside class="sidebar-nav span3">
   
     <section class="well">
@@ -202,7 +196,7 @@
 <section class="well">
   <ul id="gh_repos" class="nav">
     <li class="nav-header">GitHub Repos</li>
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/bkutil">@bkutil</a> on GitHub
@@ -224,7 +218,7 @@
 <section class="well">
   <ul id="tweets" class="nav">
     <li class="nav-header">Latest Tweets</li>
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $(document).ready(function(){
@@ -244,6 +238,7 @@
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo" class="page-footer"><hr>
@@ -259,7 +254,10 @@
       var disqus_shortname = 'bootstrapthemedemo';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://bkutil.github.com/bootstrap-theme/about/index.html';
+        var disqus_url = 'http://bkutil.github.com/bootstrap-theme/about/index.html';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

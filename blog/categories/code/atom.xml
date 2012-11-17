@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: code | Bootstrap theme demo]]></title>
+  <link href="http://bkutil.github.com/bootstrap-theme/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://bkutil.github.com/bootstrap-theme/"/>
+  <updated>2012-11-17T15:58:20+01:00</updated>
+  <id>http://bkutil.github.com/bootstrap-theme/</id>
+  <author>
+    <name><![CDATA[Balazs Kutil]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Code sharing test]]></title>
+    <link href="http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/code-sharing-test/"/>
+    <updated>2012-03-26T16:24:00+02:00</updated>
+    <id>http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/code-sharing-test</id>
+    <content type="html"><![CDATA[<!-- more -->
+
+
+<h2>Gist</h2>
+
+<p><div><script src='https://gist.github.com/2205462.js?file='></script>
+<noscript><pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+   printf(&quot;Hello, world!\n&quot;);
+   return 0;
+}</code></pre></noscript></div>
+</p>
+
+<h2>Long gist</h2>
+
+<p><div><script src='https://gist.github.com/1431483.js?file='></script>
+<noscript><pre><code>after &quot;deploy:symlink&quot;, &quot;deploy:restart_workers&quot;
+after &quot;deploy:restart_workers&quot;, &quot;deploy:restart_scheduler&quot;
+
+##
+# Rake helper task.
+# http://pastie.org/255489
+# http://geminstallthat.wordpress.com/2008/01/27/rake-tasks-through-capistrano/
+# http://ananelson.com/said/on/2007/12/30/remote-rake-tasks-with-capistrano/
+def run_remote_rake(rake_cmd)
+  rake_args = ENV['RAKE_ARGS'].to_s.split(',')
+  cmd = &quot;cd #{fetch(:latest_release)} &amp;&amp; #{fetch(:rake, &quot;rake&quot;)} RAILS_ENV=#{fetch(:rails_env, &quot;production&quot;)} #{rake_cmd}&quot;
+  cmd += &quot;['#{rake_args.join(&quot;','&quot;)}']&quot; unless rake_args.empty?
+  run cmd
+  set :rakefile, nil if exists?(:rakefile)
+end
+
+namespace :deploy do
+  desc &quot;Restart Resque Workers&quot;
+  task :restart_workers, :roles =&gt; :db do
+    run_remote_rake &quot;resque:restart_workers&quot;
+  end
+
+  desc &quot;Restart Resque scheduler&quot;
+  task :restart_scheduler, :roles =&gt; :db do
+    run_remote_rake &quot;resque:restart_scheduler&quot;
+  end
+end</code></pre></noscript></div>
+</p>
+
+<h2>Code block</h2>
+
+<p><code>ruby Mostly Harmless http://bootstrap-theme.kutilovi.cz Backlink
+def foobar?
+  true
+end
+</code></p>
+
+<h2>Code block w/ long lines</h2>
+
+<p><code>ruby Mostly Harmless http://bootstrap-theme.kutilovi.cz Backlink
+def foobar?
+  if self.bar? &amp;&amp; self.foo? &amp;&amp; options.foobar_enabled? &amp;&amp; options.verbosity == 42 &amp;&amp; options.search_for_answer_to_life_universe_and_everything
+end
+</code></p>
+
+<h2>Code block indented</h2>
+
+<p>Text</p>
+
+<pre><code>def foobar?
+  if self.bar? &amp;&amp; self.foo? &amp;&amp; options.foobar_enabled? &amp;&amp; options.verbosity == 42 &amp;&amp; options.search_for_answer_to_life_universe_and_everything
+end
+</code></pre>
+
+<p>Text</p>
+
+<h2>Code block using codeblock tag</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Javascript Array Syntax </span><a href='http://j.mp/pPUUmW'>MDN Documentation </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Inline code</h2>
+
+<p>And then he said: <code>printf()</code> FTW!</p>
+]]></content>
+  </entry>
+  
+</feed>

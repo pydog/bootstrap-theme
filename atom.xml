@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Bootstrap theme demo]]></title>
+  <link href="http://bkutil.github.com/bootstrap-theme/atom.xml" rel="self"/>
+  <link href="http://bkutil.github.com/bootstrap-theme/"/>
+  <updated>2012-11-17T15:58:20+01:00</updated>
+  <id>http://bkutil.github.com/bootstrap-theme/</id>
+  <author>
+    <name><![CDATA[Balazs Kutil]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Another extra post to test pagination]]></title>
+    <link href="http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/another-extra-post-to-test-pagination/"/>
+    <updated>2012-03-26T17:02:00+02:00</updated>
+    <id>http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/another-extra-post-to-test-pagination</id>
+    <content type="html"><![CDATA[<p>Extra post so that we see older/newer links.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[An extra post to test pagination]]></title>
+    <link href="http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/an-extra-post-to-test-pagination/"/>
+    <updated>2012-03-26T17:02:00+02:00</updated>
+    <id>http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/an-extra-post-to-test-pagination</id>
+    <content type="html"><![CDATA[<p>Extra post so that we see older/newer links.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Post layout test]]></title>
+    <link href="http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/post-layout-test/"/>
+    <updated>2012-03-26T16:45:00+02:00</updated>
+    <id>http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/post-layout-test</id>
+    <content type="html"><![CDATA[<h1>Bootstrap theme</h1>
+
+<h2>Installation</h2>
+
+<pre><code> $ git clone git://github.com/bkutil/bootstrap-theme.git bootstrap-theme
+ $ cd bootstrap-theme
+ $ git submodule init
+ $ git submodule update
+</code></pre>
+
+<p>This will pull also sass version of twitter bootstrap.</p>
+
+<!-- more -->
+
+
+<p>Copy the bootstrap-theme into
+your blog&#8217;s octopress .theme directory:</p>
+
+<pre><code> $ cp bootstrap-theme $MY_OCTOBLOG/.themes/bootstrap
+</code></pre>
+
+<p>Install the theme and generate site:</p>
+
+<pre><code> $ rake install['bootstrap']
+ $ rake generate
+</code></pre>
+
+<h2>Patches welcome!</h2>
+
+<p>This is a first draft only. Any ideas, suggestions or improvements are welcome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code sharing test]]></title>
+    <link href="http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/code-sharing-test/"/>
+    <updated>2012-03-26T16:24:00+02:00</updated>
+    <id>http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/code-sharing-test</id>
+    <content type="html"><![CDATA[<!-- more -->
+
+
+<h2>Gist</h2>
+
+<div><script src='https://gist.github.com/2205462.js?file='></script>
+<noscript><pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+   printf(&quot;Hello, world!\n&quot;);
+   return 0;
+}</code></pre></noscript></div>
+
+
+<h2>Long gist</h2>
+
+<div><script src='https://gist.github.com/1431483.js?file='></script>
+<noscript><pre><code>after &quot;deploy:symlink&quot;, &quot;deploy:restart_workers&quot;
+after &quot;deploy:restart_workers&quot;, &quot;deploy:restart_scheduler&quot;
+
+##
+# Rake helper task.
+# http://pastie.org/255489
+# http://geminstallthat.wordpress.com/2008/01/27/rake-tasks-through-capistrano/
+# http://ananelson.com/said/on/2007/12/30/remote-rake-tasks-with-capistrano/
+def run_remote_rake(rake_cmd)
+  rake_args = ENV['RAKE_ARGS'].to_s.split(',')
+  cmd = &quot;cd #{fetch(:latest_release)} &amp;&amp; #{fetch(:rake, &quot;rake&quot;)} RAILS_ENV=#{fetch(:rails_env, &quot;production&quot;)} #{rake_cmd}&quot;
+  cmd += &quot;['#{rake_args.join(&quot;','&quot;)}']&quot; unless rake_args.empty?
+  run cmd
+  set :rakefile, nil if exists?(:rakefile)
+end
+
+namespace :deploy do
+  desc &quot;Restart Resque Workers&quot;
+  task :restart_workers, :roles =&gt; :db do
+    run_remote_rake &quot;resque:restart_workers&quot;
+  end
+
+  desc &quot;Restart Resque scheduler&quot;
+  task :restart_scheduler, :roles =&gt; :db do
+    run_remote_rake &quot;resque:restart_scheduler&quot;
+  end
+end</code></pre></noscript></div>
+
+
+<h2>Code block</h2>
+
+<figure class='code'><figcaption><span>Mostly Harmless </span><a href='http://bootstrap-theme.kutilovi.cz'>Backlink</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">foobar?</span>
+</span><span class='line'>  <span class="kp">true</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Code block w/ long lines</h2>
+
+<figure class='code'><figcaption><span>Mostly Harmless </span><a href='http://bootstrap-theme.kutilovi.cz'>Backlink</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">foobar?</span>
+</span><span class='line'>  <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">bar?</span> <span class="o">&amp;&amp;</span> <span class="nb">self</span><span class="o">.</span><span class="n">foo?</span> <span class="o">&amp;&amp;</span> <span class="n">options</span><span class="o">.</span><span class="n">foobar_enabled?</span> <span class="o">&amp;&amp;</span> <span class="n">options</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">==</span> <span class="mi">42</span> <span class="o">&amp;&amp;</span> <span class="n">options</span><span class="o">.</span><span class="n">search_for_answer_to_life_universe_and_everything</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Code block indented</h2>
+
+<p>Text</p>
+
+<pre><code>def foobar?
+  if self.bar? &amp;&amp; self.foo? &amp;&amp; options.foobar_enabled? &amp;&amp; options.verbosity == 42 &amp;&amp; options.search_for_answer_to_life_universe_and_everything
+end
+</code></pre>
+
+<p>Text</p>
+
+<h2>Code block using codeblock tag</h2>
+
+<figure class='code'><figcaption><span>Javascript Array Syntax </span><a href='http://j.mp/pPUUmW'>MDN Documentation </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Inline code</h2>
+
+<p>And then he said: <code>printf()</code> FTW!</p>
+]]></content>
+  </entry>
+  
+</feed>

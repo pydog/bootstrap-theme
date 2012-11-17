@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: layout | Bootstrap theme demo]]></title>
+  <link href="http://bkutil.github.com/bootstrap-theme/blog/categories/layout/atom.xml" rel="self"/>
+  <link href="http://bkutil.github.com/bootstrap-theme/"/>
+  <updated>2012-11-17T15:58:20+01:00</updated>
+  <id>http://bkutil.github.com/bootstrap-theme/</id>
+  <author>
+    <name><![CDATA[Balazs Kutil]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Post layout test]]></title>
+    <link href="http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/post-layout-test/"/>
+    <updated>2012-03-26T16:45:00+02:00</updated>
+    <id>http://bkutil.github.com/bootstrap-theme/blog/2012/03/26/post-layout-test</id>
+    <content type="html"><![CDATA[<h1>Bootstrap theme</h1>
+
+<h2>Installation</h2>
+
+<pre><code> $ git clone git://github.com/bkutil/bootstrap-theme.git bootstrap-theme
+ $ cd bootstrap-theme
+ $ git submodule init
+ $ git submodule update
+</code></pre>
+
+<p>This will pull also sass version of twitter bootstrap.</p>
+
+<!-- more -->
+
+
+<p>Copy the bootstrap-theme into
+your blog's octopress .theme directory:</p>
+
+<pre><code> $ cp bootstrap-theme $MY_OCTOBLOG/.themes/bootstrap
+</code></pre>
+
+<p>Install the theme and generate site:</p>
+
+<pre><code> $ rake install['bootstrap']
+ $ rake generate
+</code></pre>
+
+<h2>Patches welcome!</h2>
+
+<p>This is a first draft only. Any ideas, suggestions or improvements are welcome.</p>
+]]></content>
+  </entry>
+  
+</feed>
