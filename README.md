@@ -14,7 +14,7 @@ Copy the bootstrap-theme into your blog's octopress .theme directory:
 
      $ cp -R bootstrap-theme $MY_OCTOBLOG/.themes/bootstrap
 
-Currently, Octopress depends on sass 3.1, but version at least 3.2 is needed due to requirements of [twitter-bootstrap-sass](https://github.com/jlong/sass-twitter-bootstrap):
+Currently, version of sass least 3.2 is needed due to requirements of [twitter-bootstrap-sass](https://github.com/jlong/sass-twitter-bootstrap):
 
      $ gem list| grep sass
      sass (3.2.4)
