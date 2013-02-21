@@ -42,4 +42,4 @@ This is a first draft only. Any ideas, suggestions or improvements are welcome.
 
 ## Demo
 
-Latest code from master branch is running at this [demo site](http://balazs.kutilovi.cz/bootstrap-theme).
+Latest code from master branch is running at this [demo site](http://bootstrap-theme.kutilovi.cz/).
