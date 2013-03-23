@@ -23,8 +23,12 @@ To update, run ````bundle update sass```` in your octopress directory. Make sure
 as compass might pick one of those up and site generation would fail.
 
      $ bundle update sass
+     
+     #this command bellow should be modified as showed after:
      $ gem remove sass -v3.1.20
 
+     $ gem uninstall sass --version 3.1.20
+     
 Install the theme and generate site:
 
      $ rake install['bootstrap']
